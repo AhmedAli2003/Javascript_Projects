@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5E63BA;
+    padding: 0 10px;
+}
+
+.container {
+    width: 850px;
+    background: #FFF;
+    display: flex;
+    align-items: flex-end;
+    gap: 70px;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.hangman-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangman-box img {
+    max-width: 270px;
+}
+
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.word-display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-display .letter {
+    width: 28px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px 5px;
+}
+
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-box h4 b {
+    font-weight: 600;
+    color: #FF0000;
+}
+
+.game-box .keyboard {
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+:where(.dialog-fail, .dialog-success, .keyboard) button {
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #5E63BA;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+
+:where(.dialog-fail, .keyboard) button:hover {
+    background: #8286C9;
+}
+
+.dialog-fail,
+.dialog-success {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    animation-duration: 200ms;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    display: flex;
+    opacity: 1;
+}
+
+.content {
+    background: #FFF;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.dialog-fail img,
+.dialog-success img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.dialog-fail h4,
+.dialog-success h4 {
+    font-size: 1.53rem;
+}
+
+.dialog-fail p,
+.dialog-success p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+
+.dialog-fail p b,
+.dialog-success p b {
+    color: #5E63BA;
+    font-weight: 600;
+}
+
+.dialog-fail button,
+.dialog-success button {
+    padding: 12px 23px;
+}
+
+.failed {
+    color: #ee1717;
+}
+
+.success {
+    color: #05c234;
+}
+
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+
+    .hangman-box img {
+        max-width: 200px;
+    }
+
+    .hangman-box h1 {
+        display: none;
+    }
+}
