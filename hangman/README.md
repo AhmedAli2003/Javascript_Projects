@@ -10,6 +10,7 @@ Hangman is a classic word-guessing game where players try to guess a hidden word
   - [Features](#features)
   - [Setup](#setup)
   - [How to Play](#how-to-play)
+  - [Note](#note)
 
 ## Game Description
 
@@ -45,3 +46,5 @@ To run this project locally, follow these steps:
 4. If the letter is incorrect, a part of the hangman will be drawn and the number of incorrect guesses will be updated.
 5. The game ends when you either guess the entire word correctly or run out of attempts.
 6. Click the "Play Again" button in the success or failure dialog to start a new game.
+
+## Note
