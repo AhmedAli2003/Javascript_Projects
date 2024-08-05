@@ -48,3 +48,4 @@ To run this project locally, follow these steps:
 6. Click the "Play Again" button in the success or failure dialog to start a new game.
 
 ## Note
+You can see the word in the console to test the app.
